@@ -19,17 +19,17 @@ The goals / steps of this project are the following:
 [image1]: ./examples/visualization.jpg "Visualization"
 [image2]: ./examples/grayscale.jpg "Grayscaling"
 [image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./signs/30.png "30km/h"
-[image5]: ./signs/keepright.png "Keep right"
-[image6]: ./signs/priority.png "Priority Road"
-[image7]: ./signs/yield.png "Yield"
-[image8]: ./signs/stop.png "Stop"
-[image12]: ./signs/Children.png "Children crossing"
+[image4]: ./signs/0.png "30km/h"
+[image5]: ./signs/1.png "Keep right"
+[image6]: ./signs/2.png "Priority Road"
+[image7]: ./signs/3.png "Yield"
+[image8]: ./signs/4.png "Stop"
+[image12]: ./signs/5.png "Children crossing"
 [image9]: ./examples/data_hist.png "Data Histogram"
 [image10]: ./examples/test_image.png "Test image"
 [image11]: ./examples/processed_image.png "Processed image"
 [image13]: ./examples/softmax_prob.png "Top 5 Softmax probabilities"
-[image14]: ./examples/conv2.png "Convolutional layer 2"
+[image14]: ./examples/conv.png "Convolutional layer 2"
 [image15]: .//examples/5_traffic_signs.png "Five german traffic signs from the web"
 
 ## Rubric Points
@@ -120,7 +120,13 @@ The next thing I did that got me very good results was padding the training set 
 Here are six (I picked one more by mistake and decided to keep it in the list) German traffic signs that I found on the web. 
 I copied all of them from Berlin Google map just browsing on a street, then made screen shots and converted the images into 32x32 thumbnails.
 
-![alt text][image15]
+![alt text][image4]
+![alt text][image5]
+![alt text][image6]
+![alt text][image7]
+![alt text][image8]
+![alt text][image12]
+
 
 The image 30 km/h might be difficult to classify because it tilted a bit, its shape is not an ideal circle, the same is true for children crossing sign: it's a bit shifted to the left and generally speaking figurines of chidren have lots of fine graned structure that is hard to recognise properly
 
