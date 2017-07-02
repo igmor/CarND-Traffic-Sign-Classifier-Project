@@ -1,4 +1,4 @@
-#**Traffic Sign Recognition** 
+# **Traffic Sign Recognition** 
 
 
 ---
@@ -59,6 +59,8 @@ some traffic signs in the beginning of the list.
 
 ### Design and Test a Model Architecture
 
+#### 1. Preprocessing pipeline
+
 Before doing anything with the data set I have decided to pad the images from 32x32 to 36x36. That was rather
 an experimental step that yielded suprisignly good results in the entire pipeline
 
@@ -76,7 +78,8 @@ Here is an example of a traffic sign image before and after grayscaling and norm
 ![alt text][image11]
 
 
-#### 2. The architecture of my classifier CNN network was inspired by CIFAR CNN, more specifically
+#### 2. Architecture
+The architecture of my classifier CNN network was inspired by CIFAR CNN, more specifically
 I used unusually deep filter depths in two convolutional layers: 32 and 64 accordingly, then
 it was folded into 3 fully connected layers
 
@@ -102,7 +105,7 @@ as a loss function. I used number of epoch  = 15, learning rate = 0.003 and batc
 I've tried to play with learning rates and different batch sizes, batch size > 128 were causing a significant underfitting while batch size = 64 was generally ok but in some cases of hyperparameters was extremely unstable.
 Learning rate 0.003 was also a bit higher comparing to the default 0.001 but proved to provide good fast converging results to ~ 0.9 accuracy almost immediately from the first iteration.
 
-#### 4. Iterative approach
+#### 3. Iterative approach
 
 My final model results were:
 * training set accuracy of 0.947
@@ -146,7 +149,7 @@ Here are the results of the prediction:
 
 The model was able to correctly guess 6 of the 6 traffic signs, which gives an accuracy of 100%. This compares favorably to the accuracy on the test set of a 93%
 
-#### 3. 
+#### 3. Softmax probabilities
 The model was very certain in predictions with final predictions being in 0.99 percentile group.
 
 Softmax probabilities looks like this:
