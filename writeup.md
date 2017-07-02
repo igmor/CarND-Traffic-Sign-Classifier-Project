@@ -1,8 +1,5 @@
 #**Traffic Sign Recognition** 
 
-##Writeup Template
-
-###You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
 
 ---
 
@@ -33,6 +30,7 @@ The goals / steps of this project are the following:
 [image11]: ./examples/processed_image.png "Processed image"
 [image13]: ./examples/softmax_prob.png "Top 5 Softmax probabilities"
 [image14]: ./examples/conv2.png "Convolutional layer 2"
+[image15]: .//examples/5_traffic_signs.png "Five german traffic signs from the web"
 
 ## Rubric Points
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -40,7 +38,7 @@ The goals / steps of this project are the following:
 ---
 ###Writeup / README
 
-You're reading it! and here is a link to my [project code](https://github.com/igmor/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
+Here is a link to my [project code](https://github.com/igmor/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
 
 ###Data Set Summary & Exploration
 
@@ -107,7 +105,7 @@ Learning rate 0.003 was also a bit higher comparing to the default 0.001 but pro
 ####4. Iterative approach
 
 My final model results were:
-* training set accuracy of ? 0.947
+* training set accuracy of 0.947
 * validation set accuracy of 0.934 
 * test set accuracy of 0.932
 
@@ -122,8 +120,7 @@ The next thing I did that got me very good results was padding the training set 
 Here are six (I picked one more by mistake and decided to keep it in the list) German traffic signs that I found on the web. 
 I copied all of them from Berlin Google map just browsing on a street, then made screen shots and converted the images into 32x32 thumbnails.
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8] ![alt text][image12]
+![alt text][image15]
 
 The image 30 km/h might be difficult to classify because it tilted a bit, its shape is not an ideal circle, the same is true for children crossing sign: it's a bit shifted to the left and generally speaking figurines of chidren have lots of fine graned structure that is hard to recognise properly
 
@@ -148,6 +145,7 @@ The model was very certain in predictions with final predictions being in 0.99 p
 
 Softmax probabilities looks like this:
 
+```
 TopKV2(values=array([[  1.00000000e+00,   1.10655152e-10,   6.29429148e-12,
           2.50925962e-13,   9.30440824e-14],
        [  1.00000000e+00,   1.94001016e-22,   4.29774040e-27,
@@ -165,6 +163,7 @@ TopKV2(values=array([[  1.00000000e+00,   1.10655152e-10,   6.29429148e-12,
        [13, 12,  1, 29,  9],
        [14,  4, 13,  5, 38],
        [28, 30, 11, 26, 23]], dtype=int32))
+```
 
 The code for making predictions on my final model is located in the 17th cell of the Ipython notebook:
 
@@ -174,7 +173,7 @@ The code for making predictions on my final model is located in the 17th cell of
 
 This is the output of my convolutional layer 2. You can see it's 5x32 feature maps. I believe if it was shaped like the input images 32x32 we would be able to see some spatial patterns which convolutional layer learns. In this case it is pretty hard to make any conclusions:
 
-![alt text][image13]
+![alt text][image14]
 
 
 
