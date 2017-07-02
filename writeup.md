@@ -36,11 +36,11 @@ The goals / steps of this project are the following:
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
 ---
-###Writeup / README
+### Writeup / README
 
 Here is a link to my [project code](https://github.com/igmor/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
 
-###Data Set Summary & Exploration
+### Data Set Summary & Exploration
 
 I used the pandas library to calculate summary statistics of the traffic
 signs data set:
@@ -51,13 +51,13 @@ signs data set:
 * Image data shape = (36, 36, 3)
 * Number of unique classes in the data set = 43
 
-####2. 
+#### 2. 
 Here is the data set distribution histogram. You can see a slight bias towards
 some traffic signs in the beginning of the list.
 
 ![alt text][image9]
 
-###Design and Test a Model Architecture
+### Design and Test a Model Architecture
 
 Before doing anything with the data set I have decided to pad the images from 32x32 to 36x36. That was rather
 an experimental step that yielded suprisignly good results in the entire pipeline
@@ -76,7 +76,7 @@ Here is an example of a traffic sign image before and after grayscaling and norm
 ![alt text][image11]
 
 
-####2. The architecture of my classifier CNN network was inspired by CIFAR CNN, more specifically
+#### 2. The architecture of my classifier CNN network was inspired by CIFAR CNN, more specifically
 I used unusually deep filter depths in two convolutional layers: 32 and 64 accordingly, then
 it was folded into 3 fully connected layers
 
@@ -102,7 +102,7 @@ as a loss function. I used number of epoch  = 15, learning rate = 0.003 and batc
 I've tried to play with learning rates and different batch sizes, batch size > 128 were causing a significant underfitting while batch size = 64 was generally ok but in some cases of hyperparameters was extremely unstable.
 Learning rate 0.003 was also a bit higher comparing to the default 0.001 but proved to provide good fast converging results to ~ 0.9 accuracy almost immediately from the first iteration.
 
-####4. Iterative approach
+#### 4. Iterative approach
 
 My final model results were:
 * training set accuracy of 0.947
@@ -113,9 +113,9 @@ I first started with general LeNet architecture but that was a dead end as it wa
 The next thing I did that got me very good results was padding the training set to 36x36. Apparently the was some information lost in translation if one does not do that. I also decided to keep really simple pre processing stack consisting of steps normalizing images and grayscaling but I believe I could have explored more with shifting and augmenting the training set that would have probably gotten me into a high 0.9 accuracy. 
 
 
-###Test a Model on New Images
+### Test a Model on New Images
 
-####1. Traffic Signs from the web
+#### 1. Traffic Signs from the web
 
 Here are six (I picked one more by mistake and decided to keep it in the list) German traffic signs that I found on the web. 
 I copied all of them from Berlin Google map just browsing on a street, then made screen shots and converted the images into 32x32 thumbnails.
@@ -130,7 +130,7 @@ I copied all of them from Berlin Google map just browsing on a street, then made
 
 The image 30 km/h might be difficult to classify because it tilted a bit, its shape is not an ideal circle, the same is true for children crossing sign: it's a bit shifted to the left and generally speaking figurines of chidren have lots of fine graned structure that is hard to recognise properly
 
-####2. Predictions.
+#### 2. Predictions.
 
 Here are the results of the prediction:
 
@@ -146,7 +146,7 @@ Here are the results of the prediction:
 
 The model was able to correctly guess 6 of the 6 traffic signs, which gives an accuracy of 100%. This compares favorably to the accuracy on the test set of a 93%
 
-####3. 
+#### 3. 
 The model was very certain in predictions with final predictions being in 0.99 percentile group.
 
 Softmax probabilities looks like this:
