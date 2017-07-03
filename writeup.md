@@ -42,8 +42,24 @@ Here is a link to my [project code](https://github.com/igmor/CarND-Traffic-Sign-
 
 ### Data Set Summary & Exploration
 
-I used the pandas library to calculate summary statistics of the traffic
+I used the python and numpy to calculate summary statistics of the traffic
 signs data set:
+
+```
+n_train = len(X_train)
+n_validation = len(X_valid)
+n_test = len(X_test)
+
+image_shape = X_train[0].shape
+
+n_classes = len(np.unique(y_test))
+
+print("Number of training examples =", n_train)
+print("Number of validation examples =", n_validation)
+print("Number of testing examples =", n_test)
+print("Image data shape =", image_shape)
+print("Number of classes =", n_classes)
+```
 
 * Number of training examples = 34799
 * Number of validation examples = 4410
